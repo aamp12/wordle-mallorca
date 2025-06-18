@@ -88,7 +88,7 @@ const WordleMallorca = () => {
   useEffect(() => {
     window.addEventListener('keydown', handlePhysicalKeyPress);
     return () => window.removeEventListener('keydown', handlePhysicalKeyPress);
-  }, [currentGuess, currentRow, gameStatus]);
+  }, [handlePhysicalKeyPress, currentGuess, currentRow, gameStatus]);
 
   const resetGame = () => {
     setGuesses(Array(MAX_GUESSES).fill(''));
